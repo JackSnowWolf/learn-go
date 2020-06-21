@@ -9,4 +9,7 @@ func main() {
 
 	var b, c = 1, 2
 	fmt.Println(b, c)
+
+	var tag = false
+	fmt.Println(tag)
 }
