@@ -11,7 +11,7 @@ func main() {
 	var str string = fmt.Sprintf("%s%d%s", "Alice is ", 10, " years old.")
 	fmt.Println(str)
 
-	var b, c = 1, 2
+	b, c := 5, 7
 	fmt.Println(b, c)
 
 	tag = false
