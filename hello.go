@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	. "github.com/jacksnow_wolf/learn-go/internal"
+)
 
 func main() {
 	var a int = 4
@@ -16,4 +19,6 @@ func main() {
 	fmt.Printf("value of a : %d\n", a)
 	fmt.Printf("value of *ptr : %d\n", *ptr)
 	fmt.Printf("value of ptr : %d\n", ptr)
+
+	PrintDir()
 }
