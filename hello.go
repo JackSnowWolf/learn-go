@@ -20,5 +20,6 @@ func main() {
 	fmt.Printf("value of *ptr : %d\n", *ptr)
 	fmt.Printf("value of ptr : %d\n", ptr)
 
-	PrintDir()
+	logger := GetLogger()
+	logger.Info("Hello World!")
 }

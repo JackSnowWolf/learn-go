@@ -1,15 +1,26 @@
 package internal
 
 import (
-	"fmt"
-	"log"
 	"os"
+
+	"github.com/spf13/viper"
+	"github.com/tendermint/tendermint/libs/cli"
+	"github.com/tendermint/tendermint/libs/log"
 )
 
-func PrintDir() {
-	dir, err := os.Getwd()
-	if err != nil {
-		log.Fatal(err)
+var logger log.Logger
+
+func init() {
+	loadLogger()
+}
+
+func loadLogger() {
+	logger = log.NewTMLogger(log.NewSyncWriter(os.Stdout))
+	if viper.GetBool(cli.TraceFlag) {
+		logger = log.NewTracingLogger(logger)
 	}
-	fmt.Println(dir)
+}
+
+func GetLogger() log.Logger {
+	return logger
 }
