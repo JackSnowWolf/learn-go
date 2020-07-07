@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	. "github.com/jacksnow_wolf/learn-go/internal"
+	"strings"
 )
 
 func main() {
@@ -22,4 +23,9 @@ func main() {
 
 	logger := GetLogger()
 	logger.Info("Hello World!")
+
+	str := "(address)"
+
+	fmt.Println(strings.Trim(str, "()"))
+
 }
