@@ -3,7 +3,14 @@ package main
 import (
 	"fmt"
 	. "github.com/jacksnow_wolf/learn-go/internal"
+	"reflect"
 	"strings"
+)
+
+const (
+	WAITING = uint8(iota)
+	COMPLETED
+	PROCRESSING
 )
 
 func main() {
@@ -27,5 +34,7 @@ func main() {
 	str := "(address)"
 
 	fmt.Println(strings.Trim(str, "()"))
-
+	fmt.Println(reflect.TypeOf(WAITING).String())
+	fmt.Println(reflect.TypeOf(COMPLETED).String())
+	fmt.Println(reflect.TypeOf(PROCRESSING).String())
 }
